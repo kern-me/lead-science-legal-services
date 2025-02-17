@@ -1,0 +1,17 @@
+{
+  "name": "lead-science-legal-services",
+  "version": "1.0",
+  "description": "Lead Science Legal Services, a Personal Injury Law Firm",
+  "author": "Nico Killips",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0"
+  }
+}
