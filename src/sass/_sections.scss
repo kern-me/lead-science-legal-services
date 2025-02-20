@@ -3,18 +3,15 @@
 .hero-section {
   position: relative;
   display: flex;
-  height: 20vh;
+  height: 25vh;
   padding: 0 vars.$gutter-mobile;
   background-size: cover;
   flex-direction: column;
   justify-content: center;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   @include vars.breakpoint(m) {
     height: 50vh;
-  }
-  @include vars.breakpoint(lg) {
-    height: 90vh;
   }
   img {
     width: 100%;
