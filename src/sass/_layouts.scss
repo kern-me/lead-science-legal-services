@@ -1,0 +1,137 @@
+@use 'vars';
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.flex-col {
+  text-align: center;
+  margin-inline: auto;
+  @include vars.breakpoint(m) {
+    text-align: left;
+    margin-inline: 0;
+  }
+  p {
+    max-width: 60ch;
+  }
+}
+
+.inner {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.u-row {
+  display: grid;
+  width: 100%;
+  &--1up {
+    padding: 5rem 0;
+    @include vars.breakpoint(m) {
+      padding: 10rem 0 5rem;
+    }
+  }
+  &--2up {
+    grid-template-columns: 1fr;
+    @include vars.breakpoint(m) {
+      grid-template-columns: 1fr 1fr;
+    }
+    .u-col {
+      display: flex;
+      flex-direction: column;
+      &--content {
+        order: 2;
+        @include vars.breakpoint(m) {
+          order: 1;
+          padding: 10rem 0;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+      &--img {
+        height: 20vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        order: 1;
+
+        @include vars.breakpoint(m) {
+          order: 2;
+        }
+      }
+      @include vars.breakpoint(m) {
+        flex: 1;
+        height: auto;
+      }
+    }
+
+  }
+  &--3up {
+    grid-template-columns: 1fr;
+    @include vars.breakpoint(m) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &--4up {
+    grid-gap: 4rem;
+    grid-template-columns: 1fr;
+    @include vars.breakpoint(s) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include vars.breakpoint(m) {
+      grid-gap: 0;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+
+.u-row--rev {
+  .u-col--content {
+    order: 2;
+    @include vars.breakpoint(m) {
+      padding: 10rem 5rem;
+    }
+  }
+  .u-col--img {
+    order: 1;
+  }
+}
+
+.u-img-bg {
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.row--rev {
+  display: flex;
+  flex-direction: column;
+  @include vars.breakpoint(m) {
+    display: block;
+  }
+
+  .col-md-6 {
+    &:first-child,
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      @include vars.breakpoint(m) {
+        display: block;
+      }
+    }
+    &:first-child {
+      order: 2;
+    }
+    &:last-child {
+      order: 1;
+      padding-bottom: 5rem;
+      @include vars.breakpoint(m) {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
