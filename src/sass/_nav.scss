@@ -1,0 +1,37 @@
+@use 'vars';
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: vars.$gutter-mobile;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include vars.breakpoint(s) {
+    flex-direction: row;
+  }
+
+  &--right {
+    display: flex;
+    align-items: center;
+  }
+  &--logo {
+    display: flex;
+    flex-direction: column;
+    svg {
+      width: 20rem;
+      height: 5rem;
+    }
+  }
+}
+
+.header-phone-link {
+  display: flex;
+  gap: 1rem;
+  color: white;
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}

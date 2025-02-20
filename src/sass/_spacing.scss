@@ -1,0 +1,15 @@
+@use 'vars';
+
+.section-padding-x {
+  padding: 5rem 0;
+  @include vars.breakpoint(m) {
+    padding: 10rem 0;
+  }
+}
+
+.pt-lg--m {
+  padding-top: 5rem;
+  @include vars.breakpoint(m) {
+    padding-top: 0;
+  }
+}

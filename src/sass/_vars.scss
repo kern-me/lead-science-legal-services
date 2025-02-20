@@ -1,0 +1,19 @@
+$color-aqua-green: #00B59F;
+$color-dark-gray: #393E46;
+$color-black: #000;
+$color-white: #fff;
+
+$gutter-mobile: 2rem;
+
+
+@mixin breakpoint($point) {
+  @if $point == s {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == m {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $point == l {
+    @media (min-width: 1200px) { @content; }
+  }
+}

@@ -1,0 +1,64 @@
+@use 'vars';
+@use 'spacing';
+@use 'buttons';
+@use 'utilities';
+@use 'nav';
+@use 'sections';
+
+body {
+  font-family: "Poppins", serif;
+  font-size: 15px;
+  min-width: 360px;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+a {
+  color: vars.$color-aqua-green
+}
+
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1.35;
+  font-weight: 200;
+  max-width: 20ch;
+  margin: auto;
+  @include vars.breakpoint(m) {
+    font-size: 7rem;
+  }
+  @include vars.breakpoint(l) {
+    font-size: 9rem;
+  }
+}
+
+h2 {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.flex-col {
+  text-align: center;
+  margin-inline: auto;
+  @include vars.breakpoint(m) {
+    text-align: left;
+    margin-inline: 0;
+  }
+  p {
+    max-width: 60ch;
+  }
+}
+
+
+
+
+
+
+
+
+
+

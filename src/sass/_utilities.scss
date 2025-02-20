@@ -1,0 +1,79 @@
+@use 'vars';
+
+.u-no-padding {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 auto;
+}
+
+.bg--dark-gray {
+  background-color: vars.$color-dark-gray;
+  color: vars.$color-white;
+}
+
+.logo-small {
+  width: 30rem;
+  height: auto;
+}
+
+.flex-row {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  @include vars.breakpoint(m) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
+.section-tall {
+  height: auto;
+  @include vars.breakpoint(m) {
+    height: 48rem;
+  }
+}
+
+.border-right {
+  border-right: solid vars.$color-dark-gray 1px;
+}
+
+.max-width--sm {
+  max-width: 10ch;
+}
+
+.col-vertical-line {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  height: 60%;
+  width: 1px;
+  background: vars.$color-dark-gray;
+  transform: translate(-50%, -50%);
+  display: none;
+  @include vars.breakpoint(m) {
+    display: block;
+  }
+}
+
+.gap {
+  &-lg {
+    gap: 3rem;
+  }
+}
