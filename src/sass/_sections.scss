@@ -10,10 +10,10 @@
   justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
-  @include vars.breakpoint(s) {
-    height: 30vh;
-  }
   @include vars.breakpoint(m) {
+    height: 50vh;
+  }
+  @include vars.breakpoint(lg) {
     height: 90vh;
   }
   img {
