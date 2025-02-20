@@ -1,29 +1,31 @@
 @use 'vars';
 
 .top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: vars.$gutter-mobile;
-  flex-direction: column;
-  gap: 2rem;
-
-  @include vars.breakpoint(s) {
-    flex-direction: row;
-  }
-
-  &--right {
-    display: flex;
-    align-items: center;
-  }
-  &--logo {
+  padding: 3rem 0;
+  background-color: vars.$color-dark-gray;
+  &--left, &--right {
     display: flex;
     flex-direction: column;
-    svg {
-      width: 20rem;
-      height: 5rem;
+  }
+  &--left {
+    align-items: center;
+    @include vars.breakpoint(s) {
+      align-items: start;
     }
   }
+  &--right {
+    align-items: center;
+    padding-top: 3rem;
+    @include vars.breakpoint(s) {
+      align-items: end;
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.logo {
+  width: 20rem;
+  height: auto;
 }
 
 .header-phone-link {
