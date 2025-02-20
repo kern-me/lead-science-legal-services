@@ -24,3 +24,31 @@
     z-index: 0;
   }
 }
+
+.u-tout {
+  text-align: center;
+  padding-top: 2rem;
+  @include vars.breakpoint(m) {
+    padding-top: 0;
+  }
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3){
+    border-right: none;
+    @include vars.breakpoint(m) {
+      border-right: 1px solid vars.$color-dark-gray;
+    }
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    @include vars.breakpoint(l) {
+      font-size: 4rem;
+    }
+  }
+  p {
+    margin: 0 auto;
+  }
+}
