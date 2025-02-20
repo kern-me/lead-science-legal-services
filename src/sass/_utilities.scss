@@ -7,7 +7,13 @@
 }
 
 .bg--dark-gray {
-  background-color: vars.$color-dark-gray;
+  background: rgb(57,62,70);
+  background: radial-gradient(circle, rgba(57,62,70,1) 0%, rgba(34,34,34,1) 100%);
+  color: vars.$color-white;
+}
+
+.bg--black {
+  background-color: vars.$color-black;
   color: vars.$color-white;
 }
 
@@ -54,10 +60,6 @@
   border-right: solid vars.$color-dark-gray 1px;
 }
 
-.max-width--sm {
-  max-width: 10ch;
-}
-
 .col-vertical-line {
   left: 50%;
   top: 50%;
@@ -72,8 +74,24 @@
   }
 }
 
-.gap {
-  &-lg {
-    gap: 3rem;
+.u-text-center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.u-text-center--mobile {
+  text-align: center;
+  margin-inline: auto;
+  @include vars.breakpoint(m) {
+    text-align: left;
+    margin-inline: unset;
   }
+}
+
+.u-align-center--mobile {
+  margin-inline: auto;
+}
+
+.u-margin-reset {
+  margin-inline: unset;
 }
