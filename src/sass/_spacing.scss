@@ -14,6 +14,13 @@
   }
 }
 
+.pb-xl {
+  padding-bottom: 5rem;
+  @include vars.breakpoint(m) {
+    padding-bottom: 10rem;
+  }
+}
+
 .mt-lg--m {
   margin-top: 5rem;
   @include vars.breakpoint(m) {

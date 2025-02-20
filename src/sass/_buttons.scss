@@ -30,6 +30,9 @@
   }
   &-dark {
     color: vars.$color-aqua-green;
+    &:visited, &:active {
+      color: vars.$color-dark-gray;
+    }
     &:hover {
       color: vars.$color-dark-gray;
     }
@@ -42,6 +45,9 @@
   }
   &-light {
     color: vars.$color-white;
+    &:visited, &:active {
+      color: vars.$color-white;
+    }
     &:hover {
       color: vars.$color-aqua-green;
     }

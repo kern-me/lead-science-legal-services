@@ -72,7 +72,14 @@ h2 {
   padding: 0 5%;
 }
 
-.u-row {
+.u-row--1up {
+  padding: 5rem 0;
+  @include vars.breakpoint(m) {
+    padding: 10rem 0 5rem;
+  }
+}
+
+.u-row--2up {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
@@ -120,6 +127,43 @@ h2 {
   }
   .u-col--img {
     order: 1;
+  }
+}
+
+.u-row--4up {
+  display: grid;
+  width: 100%;
+  grid-gap: 4rem;
+  grid-template-columns: 1fr;
+  @include vars.breakpoint(s) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include vars.breakpoint(m) {
+    grid-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.u-tout {
+  text-align: center;
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3){
+    border-right: none;
+    @include vars.breakpoint(m) {
+      border-right: 1px solid vars.$color-dark-gray;
+    }
+  }
+  h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    @include vars.breakpoint(l) {
+      font-size: 4rem;
+    }
+  }
+  p {
+    margin-bottom: 0;
   }
 }
 
