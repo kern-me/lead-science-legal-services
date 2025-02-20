@@ -1,6 +1,7 @@
 @use 'vars';
 @use 'spacing';
 @use 'buttons';
+@use 'lists';
 @use 'utilities';
 @use 'nav';
 @use 'sections';
@@ -50,6 +51,60 @@ h2 {
   }
   p {
     max-width: 60ch;
+  }
+}
+
+.row--two-col {
+  display: flex;
+  .flex-col {
+    position: relative;
+    &--img {
+      min-height: 100%;
+    }
+  }
+}
+
+.inner {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.u-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  @include vars.breakpoint(m) {
+    grid-template-columns: 1fr 1fr;
+  }
+  .u-col {
+    display: flex;
+    flex-direction: column;
+    &--content {
+      order: 2;
+      @include vars.breakpoint(m) {
+        order: 1;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+    &--img {
+      height: 20vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      order: 1;
+
+      @include vars.breakpoint(m) {
+        order: 2;
+      }
+    }
+    @include vars.breakpoint(m) {
+      flex: 1;
+      height: auto;
+    }
+
   }
 }
 

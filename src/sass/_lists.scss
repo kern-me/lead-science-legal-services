@@ -1,0 +1,15 @@
+@use 'vars';
+
+.u-list--checklist {
+  list-style-type: none;
+  padding-left: 2.5rem;
+  li {
+    position: relative;
+    line-height: 3.25rem;
+    &:before {
+      position: absolute;
+      left: -2.5rem;
+      content: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.8913 8.65679L13.33 0.284279C13.712 -0.0947596 14.3314 -0.0947596 14.7135 0.284279C15.0608 0.628859 15.0924 1.16807 14.8082 1.54804L14.7135 1.6569L5.58304 10.7157C5.23573 11.0603 4.69226 11.0916 4.30929 10.8097L4.19957 10.7157L0.286526 6.83337C-0.0955087 6.45433 -0.0955087 5.83979 0.286526 5.46075C0.63383 5.11617 1.17731 5.08484 1.56028 5.36677L1.67 5.46075L4.8913 8.65679Z' fill='%2300B59F'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
