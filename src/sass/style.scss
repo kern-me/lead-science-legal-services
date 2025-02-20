@@ -6,6 +6,7 @@
 @use 'nav';
 @use 'sections';
 
+
 body {
   font-family: "Poppins", serif;
   font-size: 15px;
@@ -40,6 +41,7 @@ h1 {
 h2 {
   margin-top: 0;
   font-weight: 700;
+  line-height: 1.3;
 }
 
 .flex-col {
@@ -81,9 +83,11 @@ h2 {
     display: flex;
     flex-direction: column;
     &--content {
+      padding: 5rem 0;
       order: 2;
       @include vars.breakpoint(m) {
         order: 1;
+        padding: 10rem 0;
       }
       p {
         margin-bottom: 0;
@@ -104,7 +108,18 @@ h2 {
       flex: 1;
       height: auto;
     }
+  }
+}
 
+.u-row--rev {
+  .u-col--content {
+    order: 2;
+    @include vars.breakpoint(m) {
+      padding: 10rem 5rem;
+    }
+  }
+  .u-col--img {
+    order: 1;
   }
 }
 

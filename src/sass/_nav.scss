@@ -30,8 +30,15 @@
   display: flex;
   gap: 1rem;
   color: white;
+  transition: color 200ms ease-in-out;
+  svg path {
+    transition: fill 200ms ease-in-out;
+  }
   &:hover {
-    color: white;
-    text-decoration: underline;
+    color: vars.$color-aqua-green;
+    text-decoration: none;
+    svg path {
+      fill: vars.$color-aqua-green;
+    }
   }
 }
