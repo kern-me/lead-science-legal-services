@@ -13,6 +13,9 @@
   @include vars.breakpoint(m) {
     height: 50vh;
   }
+  @include vars.breakpoint(l) {
+    height: 90vh;
+  }
   img {
     width: 100%;
     height: 100%;
@@ -50,7 +53,19 @@
   }
 }
 
+.section--who-we-are {
+  p {
+    padding: 0 2rem;
+    @include vars.breakpoint(m) {
+      padding: 0;
+    }
+  }
+}
+
 .logo-avvo {
   width: 6rem;
   height: auto;
+  display: flex;
+  position: relative;
+  right: 10rem;
 }
