@@ -26,15 +26,15 @@ footer {
 }
 
 .footer-logo-link, .top-nav--logo-link {
-  .logo {
-    filter: none;
-    transition: filter 400ms ease-in-out;
-  }
-  &:hover {
-    .logo {
-      filter: brightness(0) saturate(100%) invert(42%) sepia(66%) saturate(2403%) hue-rotate(144deg) brightness(102%) contrast(101%);
-    }
-  }
+  //.logo {
+  //  filter: none;
+  //  transition: filter 400ms ease-in-out;
+  //}
+  //&:hover {
+  //  .logo {
+  //    filter: brightness(0) saturate(100%) invert(42%) sepia(66%) saturate(2403%) hue-rotate(144deg) brightness(102%) contrast(101%);
+  //  }
+  //}
 }
 
 .btn-social {
